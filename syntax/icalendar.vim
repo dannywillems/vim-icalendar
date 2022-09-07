@@ -37,13 +37,13 @@ syn keyword	icalSetValue	PRIVATE PUBLIC PUBLISH GREGORIAN DISPLAY
 syn match	icalSetValue	/:COMPLETED$/
 
 " Types: PreProc Keyword Type String Comment Special
-IcalHiLink	icalProperty	PreProc
+IcalHiLink	icalProperty	Statement
+IcalHiLink	icalCustom	Statement
 IcalHiLink	icalObject	Label
-IcalHiLink	icalObjectType	Type
-IcalHiLink	icalDate	String
+IcalHiLink	icalObjectType	Identifier
+IcalHiLink	icalDate	Number
 IcalHiLink	icalParameter	Comment
-IcalHiLink	icalSetValue	Special
-IcalHiLink	icalCustom	Error
+IcalHiLink	icalSetValue	Constant
 
 delcommand IcalHiLink
   
