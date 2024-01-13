@@ -36,6 +36,13 @@ syn keyword	icalSetValue	NEEDS-ACTION ACCEPTED DECLINED IN-PROGRESS
 syn keyword	icalSetValue	PRIVATE PUBLIC PUBLISH GREGORIAN DISPLAY
 syn match	icalSetValue	/:COMPLETED$/
 
+" to enable syntax folding, add to your vimrc:
+" augroup iCalendarFolding
+"   autocmd!
+"   autocmd FileType icalendar setlocal foldmethod=syntax
+" augroup END
+syntax region icalObject start="^BEGIN:\z([A-Z]\+\)$" end="^END:\z1$" fold transparent keepend extend
+
 " Types: PreProc Keyword Type String Comment Special
 IcalHiLink	icalProperty	PreProc
 IcalHiLink	icalObject	Label
